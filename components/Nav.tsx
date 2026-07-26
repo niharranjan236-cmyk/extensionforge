@@ -9,7 +9,7 @@ export function Nav() {
           ExtensionForge
         </Link>
         <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-          <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/#contact">Contact</a>
+          <Link href="/#features">Features</Link><Link href="/#pricing">Pricing</Link><Link href="/#faq">FAQ</Link><Link href="/#contact">Contact</Link>
         </div>
         <div className="flex items-center gap-3">
           <Link href="/login" className="hidden text-sm text-slate-300 sm:block">Log in</Link>
