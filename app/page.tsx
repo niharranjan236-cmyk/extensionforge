@@ -2,10 +2,10 @@ import Link from "next/link";
 import { Nav } from "@/components/Nav";
 
 const features = [
-  ["Guided generator", "Collect extension metadata and instantly produce Manifest V3-ready starter files."],
+  ["AI prompt builder", "Describe an extension in plain English and generate Manifest V3-ready source files."],
   ["Launch workspace", "Track recent projects, profile details, and handoff-ready extension packages."],
   ["Production polish", "Responsive UI, dark mode, pricing, FAQ, and contact flows built for conversion."],
-  ["ZIP exports", "Download generated manifest, popup HTML, and popup JavaScript as a ready-to-load archive."]
+  ["ZIP exports", "Download manifest, popup, background, content script, icons, and README as a ready-to-load archive."]
 ];
 const faqs = [
   ["Can I publish generated extensions?", "Yes. ExtensionForge creates starter files you can customize, test, and submit to the Chrome Web Store."],
@@ -22,9 +22,9 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl text-center">
           <p className="mx-auto mb-6 w-fit rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-200">Chrome extensions from idea to ZIP in minutes</p>
           <h1 className="mx-auto max-w-5xl text-5xl font-semibold tracking-tight sm:text-7xl">Forge production-ready Chrome extension starters without boilerplate.</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">ExtensionForge combines a sleek SaaS dashboard with a practical generator for manifest.json, popup.html, popup.js, and ZIP downloads.</p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">ExtensionForge combines an AI prompt builder, authentication screens, project dashboard, local project saving, Manifest V3 generation, icons, background and content scripts, and ZIP downloads.</p>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row"><Link href="/generator" className="btn-primary">Generate extension</Link><Link href="/dashboard" className="btn-secondary">View dashboard</Link></div>
-          <div className="card mx-auto mt-16 max-w-5xl p-3"><div className="rounded-2xl border border-white/10 bg-slate-950 p-6 text-left shadow-2xl"><div className="mb-6 flex gap-2"><span className="h-3 w-3 rounded-full bg-red-400"/><span className="h-3 w-3 rounded-full bg-yellow-400"/><span className="h-3 w-3 rounded-full bg-green-400"/></div><pre className="overflow-x-auto text-sm text-blue-100">{`manifest.json\npopup.html\npopup.js\n\n$ extensionforge export --zip`}</pre></div></div>
+          <div className="card mx-auto mt-16 max-w-5xl p-3"><div className="rounded-2xl border border-white/10 bg-slate-950 p-6 text-left shadow-2xl"><div className="mb-6 flex gap-2"><span className="h-3 w-3 rounded-full bg-red-400"/><span className="h-3 w-3 rounded-full bg-yellow-400"/><span className="h-3 w-3 rounded-full bg-green-400"/></div><pre className="overflow-x-auto text-sm text-blue-100">{`AI prompt → manifest.json\npopup.html + popup.js\nbackground.js + content.js\nicons/icon-128.svg\n\n$ extensionforge export --zip`}</pre></div></div>
         </div>
       </section>
       <section id="features" className="mx-auto grid max-w-7xl gap-4 px-6 py-20 md:grid-cols-2 lg:grid-cols-4">{features.map(([title, body]) => <article className="card" key={title}><h3 className="text-xl font-semibold">{title}</h3><p className="mt-3 text-slate-400">{body}</p></article>)}</section>
