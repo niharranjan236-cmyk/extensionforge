@@ -4,11 +4,11 @@ ExtensionForge is a production-ready AI Chrome Extension Builder built with Next
 
 ## Features
 
-- AI-style prompt workflow that infers extension metadata from a plain-English description
-- Generates `manifest.json`, `popup.html`, `popup.css`, `popup.js`, `background.js`, `content.js`, SVG icons, and extension README files
+- OpenAI-powered prompt workflow that turns plain-English descriptions into complete extension source files
+- Generates `manifest.json`, `popup.html`, `styles.css`, `popup.js`, `background.js`, conditional `content.js`, SVG icons, and extension README files
 - Browser ZIP export powered by JSZip
 - Authentication screens for login and registration
-- Project saving and dashboard using local storage for this deployable prototype
+- Supabase Auth and row-level-secured project storage
 - Responsive SaaS landing page and app workspace
 - Vercel-ready configuration
 
@@ -18,6 +18,18 @@ ExtensionForge is a production-ready AI Chrome Extension Builder built with Next
 npm install
 npm run dev
 ```
+
+## Environment variables
+
+Create `.env.local` with the following values before running the app:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+OPENAI_API_KEY=your-openai-api-key
+```
+
+Run the SQL in `supabase/migrations/202607260001_create_projects.sql` in your Supabase project to create the authenticated `projects` table and row-level-security policies.
 
 Open http://localhost:3000.
 
