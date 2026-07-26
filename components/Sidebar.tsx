@@ -1,0 +1,3 @@
+import Link from "next/link";
+const items = [["Dashboard", "/dashboard"], ["Generator", "/generator"], ["Settings", "/dashboard"]];
+export function Sidebar() { return <aside className="border-white/10 bg-white/5 p-4 md:min-h-screen md:w-72 md:border-r"><Link href="/" className="mb-8 flex items-center gap-3 font-semibold"><span className="grid h-9 w-9 place-items-center rounded-xl bg-blue-500">✦</span>ExtensionForge</Link><nav className="grid gap-2">{items.map(([label, href]) => <Link className="rounded-2xl px-4 py-3 text-slate-300 hover:bg-white/10" href={href} key={label}>{label}</Link>)}</nav></aside>; }
